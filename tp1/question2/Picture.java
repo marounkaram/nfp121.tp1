@@ -50,7 +50,7 @@ public class Picture {
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
@@ -74,6 +74,16 @@ public class Picture {
      * Change this picture to use color display
      */
     public void setColor() {
+        if (wall != null) // only if it's painted already...
+        {
+            wall.changeColor("red");
+            window.changeColor("black");
+            roof.changeColor("green");
+            sun.changeColor("blue");
+        }
+    }
+    
+     public void yellowsun() {
         if (wall != null) // only if it's painted already...
         {
             wall.changeColor("red");
